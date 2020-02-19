@@ -15,5 +15,3 @@ let Greet4 = require('./greet4');
 let gtr = new Greet4();
 gtr.greet();
 
-
-

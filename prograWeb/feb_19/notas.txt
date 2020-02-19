@@ -1,0 +1,16 @@
+Eventos
+
+
+Prototipos
+app.get tiene dos parametros (string = ruta ,handler)
+app.listen = escuchar en algun puerto.
+
+
+si esta escrita la funcion prototype se esta agregando funcionalidad o propiedades.
+
+
+
+Array de funciones
+
+
+

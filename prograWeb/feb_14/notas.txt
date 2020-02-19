@@ -1,0 +1,18 @@
+Object:
+a collection of names/value pairs
+
+var y = {} es un objeto vacio.
+
+despues del module.exports puede haber un:
+*funcion
+*metodo
+*objeto
+*constructor
+
+pasos
+modulo: exporta
+main: hace un require
+
+
+
+CODEWARS pagina para practicar
