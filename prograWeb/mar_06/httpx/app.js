@@ -2,7 +2,7 @@
 Lo que tenemos que hacer siempre para realizar una peticion a un servidor API es registrarnos y 
 obtener la key
 */
-
+module.exports
 //
 const request = require('request')
 var fahrenheitToCelsius = require('fahrenheit-to-celsius');

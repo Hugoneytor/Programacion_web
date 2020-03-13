@@ -1,17 +1,17 @@
-//function statement
-// function greet(){
-//     console.log(`hi`);
-// }
+// function statement
+function greet(){
+    console.log(`hi`);
+}
 
-// greet();
+greet();
 
-//functions are first-class
-// function logGreeting(fn){
-//     fn();
-// }
+// functions are first-class
+function logGreeting(fn){
+    fn();
+}
 
 
-// logGreeting(greet);
+logGreeting(greet);
 
 
 // let logGreeting = fn =>{
@@ -19,13 +19,13 @@
 // }
 // logGreeting(greet);
 
-let logGreeting = (()=>{
-    console.log('hi');
-});
+// let logGreeting = (()=>{
+//     console.log('hi');
+// });
 
-logGreeting(()=>{
-    console.log(`Hi`);
-});
+// logGreeting(()=>{
+//     console.log(`Hi`);
+// });
 
 
 //NOTAS:
