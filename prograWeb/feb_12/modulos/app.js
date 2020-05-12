@@ -1,3 +1,3 @@
-require ('./greeting');
+const greets = require ('./greeting');
 
-greeting();
+greets.greet();

@@ -2,4 +2,4 @@ let greet = () => {
     console.log(`Hi`);
 }
 
-greet();
+exports.greet = greet;
