@@ -30,14 +30,41 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.post('/personData',urlencodedParser, (req, res) => {
+app.get('/buscar', urlencodedParser, function(req,res){
     res.render('personData');
 });
 
-app.post('/insertar',urlencodedParser, (req, res) => {
+app.get('/insertar',urlencodedParser, function(req,res){
     res.render('insertar');
 });
 
+app.get('/ListaDeUsuarios', function(req,res){
+    let user = mongoose.model('Users', userSchema);
+    user.find({}, function(err, users){
+        res.render('home', {users})
+    })
+});
+
+app.get('/borrar', urlencodedParser, function(req,res){
+    res.render('borrarUsuario');
+});
+
+app.post('/borrado', urlencodedParser, (req,res)=>{
+    user.find({id: req.body.id},
+        function(err,data){
+            if(err){
+                console.log(err);
+            }else{
+                user.findByIdAndDelete(req.body.id, function(err,data){
+                    if(err){
+                        console.log(err);
+                    }else{
+                        res.send('Eliminado');
+                    }
+                })
+            }
+        });
+});
 
 
 app.post('/insertarPersona', urlencodedParser, (req, res) => {
@@ -70,10 +97,10 @@ app.post('/insertarPersona', urlencodedParser, (req, res) => {
 
 });
 
-app.post('/buscar', urlencodedParser, (req, res) => {
+app.post('/buscarPersona', urlencodedParser, (req, res) => {
     console.log(req.body.userName);
 
-    var user = mongoose.model('Users', userSchema);
+
 
         user.find({username: req.body.userName}, function(err,data){
             if(err){
@@ -88,14 +115,6 @@ app.post('/buscar', urlencodedParser, (req, res) => {
         });  
    
 
-});
-
-
-app.get('/usersList', function(req,res){
-    let user = mongoose.model('User', userSchema);
-    user.find({}, function(err, users){
-        res.render('home', {users})
-    })
 });
 
 

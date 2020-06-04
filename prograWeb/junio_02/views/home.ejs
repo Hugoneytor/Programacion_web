@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../public/main.css">
+</head>
+<body>
+    <h1>Usuarios</h1>
+    <table>
+        
+        <tr >
+            <div class="primerFila">
+            <th>Nombre</th>
+            <th>Contraseña</th>
+            <th>id</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </div>
+        </tr>
+        
+        <% users.forEach(function(o) { %>
+
+        
+        <tr>
+            <td> <%= o.username %></td>
+            <td> <%= o.password %></td>
+            <td> <%= o._id %></td>
+            <td><button onclick="location.href='/borrar'">Borrar</button></td>
+            <td><button type="submit">Editar</button></td>
+        </tr>
+    <% }); %>
+    </table>
+</body>
+</html>
