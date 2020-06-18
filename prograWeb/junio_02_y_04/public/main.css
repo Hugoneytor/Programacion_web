@@ -1,3 +1,21 @@
-.primerFila th{
-    margin-right: 20px;
+body{
+    background-color: gray;
+}
+
+h1{
+    text-align: center;
+}
+
+table{
+    width: 1200px;
+    margin: auto;
+}
+
+th{
+    font-size: 20px;
+}
+
+td{
+    text-align: center;
+    color: white;
 }
